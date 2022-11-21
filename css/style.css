@@ -14,6 +14,12 @@
     utilizar EM no lugar de px 
 */
 
+
+body {
+    background: linear-gradient(180deg, #1B1B26 17.22%, #5748D3 137.97%);
+    
+}
+
 .menu__img {
     width:40px;
 }
@@ -41,18 +47,37 @@
     align-items: center;
     margin-bottom:220px;
 }
+.buttons__login {
+    transition: color .2s ease-in ;
+}
+.buttons__login:hover{
+   color:#5748D3;
+}
 .buttons__register {
     padding:20px 36px;
     border:1px solid var(--neutral-color);
     margin-left:24px;
     border-radius:100px;
-}
+   
+    /* PARA GARANTIR O FUNCIONAMENTO EM DIFERENTES NAVEGADORES*/
+    -webkit-transition: background 0.5s ease-in;  
+    -moz-transition: background 0.5s ease-in;  
+    -o-transition: background 0.5s ease-in;  
+    transition: background 0.5s ease-in;  
 
-.main-header__buttons a:hover{
-    background-color:var(--primary-color);
-    padding:14px 20px;
-    border-radius: 100px;
-    transition-duration: 0.5s;
+    background-size:1px 200px;  
+
+}
+.buttons__register:hover {
+ 
+    border: 1px solid transparent; 
+
+    /* PARA GARANTIR O FUNCIONAMENTO EM DIFERENTES NAVEGADORES*/
+    background: -webkit-linear-gradient(90.5deg, #5E4BFF 44.32%, #96FFF5 173.17%);
+    background: -moz-linear-gradient(90.5deg, #5E4BFF 44.32%, #96FFF5 173.17%);
+    background: -o-linear-gradient(90.5deg, #5E4BFF 44.32%, #96FFF5 173.17%);
+    background: linear-gradient(90.5deg, #5E4BFF 44.32%, #96FFF5 173.17%);
+    background-position:174.5px; 
 }
 
 .main-header a {
@@ -65,11 +90,12 @@
     gap:36px;
 }
 
+.navigation__list-element a {
+    transition: color .2s ease-in;
+}
+
 .navigation__list-element a:hover{
-    background-color:var(--primary-color);
-    padding:14px 20px;
-    border-radius: 100px;
-    transition-duration: 0.5s;
+    color:#5748D3;
 }
 
 

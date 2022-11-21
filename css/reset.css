@@ -11,12 +11,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, 
+span:not(.introduction__title__gradient){
     color:var(--neutral-color);
     font-size:18px;
 }
 body {
-    background: linear-gradient(180deg, #1B1B26 17.22%, #5748D3 137.97%);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -28,3 +28,6 @@ a {
     text-decoration: none;
 }
 
+html {
+ scroll-behavior:smooth ;   
+}
