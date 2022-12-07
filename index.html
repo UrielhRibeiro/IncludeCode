@@ -18,33 +18,115 @@
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
 
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/sizes.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 </head>
 <body>
 
-    <!-- ADICIONAR OS POP-UPS DE REGISTRO E LOGIN AQUI -->
-    <div class="personalization-container overlay">
-        <div class="personalization">
-            <header class="personalization-header">
-                <div class="personalization-header__left">
-                    <div class="personalization-header__img-left">
+    <div class="register-container overlay">
+        <div class="modal register">
+            <header class="modal-header">
+                <div class="modal-header__left">
+                    <div class="modal-header__img-left">
                         <img src="assets/arrow-left.svg" alt="Seta para esquerda"/>
                         <h3>Crie uma conta</h3>
                     </div>
+                    <span class="login-span">Já tem uma conta? <span class="login-redirect">Faça Login</span> </span>
                 </div>
-                <div class="personalization-header__right">
-                    <div class="personalization-header__progress">
+                <div class="modal-header__right">
+                    <div class="modal-header__progress">
+                        <span> 
+                            1 de 3
+                        </span>
+                    </div>
+                    <div class="modal-header__indication modal-header__indication--register">
+                        <h4>Passo 1</h4>
+                        <span>
+                            Dados pessoais 
+                        </span>
+                    </div>
+                </div>
+            </header>
+            <main class="register-main">
+                <form class="register-form">
+                    
+                    <label>
+                        <span>E-mail</span>
+                        <input type="email" placeholder="Digite seu e-mail..." />
+                    </label>
+                    <div class="lastName">
+                        <label>
+                            <span>Nome</span>
+                            <input type="text" placeholder="Ex.: Maria" />
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                <span>Esse é o meu nome social</span>
+                            </label>
+                        </label>
+                        <label >
+                            <span>Sobrenome</span>
+                            <input type="text" placeholder="Ex.: Amélia" />
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <span>Crie uma senha</span>
+                            <input type="password" placeholder="Mín. 4 caracteres" />
+                        </label>
+
+                        <label>
+                            <span>Digite Novamente</span>
+                            <input type="password" placeholder="Ex.: Amélia" />
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <span>Idade</span>
+                            <input type="number" placeholder="Ex.: 17"/>
+                        </label>
+                        
+                        <label class="checkbox">
+                            <input type="checkbox" />
+                            <span>Prefiro não informar</span>
+                        </label>
+                        
+                    </div>
+                    <a  class="btn-primary register-btn" role="button" href="#">
+            
+                        Continuar
+                    
+                </a>
+                </form>
+                <img src="./assets/register-illustration.svg" />
+            </main>
+        </div>
+    </div>
+    <!-- ADICIONAR OS POP-UPS DE REGISTRO E LOGIN AQUI -->
+
+    <div class="personalization-container overlay">
+        <div class="modal personalization">
+            <header class="modal-header">
+                <div class="modal-header__left">
+                    <div class="modal-header__img-left">
+                        <img src="assets/arrow-left.svg" class="arrow-left"alt="Seta para esquerda"/>
+                        <h3>Crie uma conta</h3>
+                    </div>
+                </div>
+                <div class="modal-header__right">
+                    <div class="modal-header__progress">
                         <span> 
                             2 de 3
                         </span>
                     </div>
-                    <div class="personalization-header__indication">
+                    <div class="modal-header__indication">
                         <h4>Passo 2</h4>
                         <span>Personalização</span>
                     </div>
@@ -89,7 +171,7 @@
                     <div class="personalization-main__buttons ">
                         <!-- A classe btn-return está sendo usada no javascript para identificar esse botão -->
                         <a href="#"  class="btn-primary btn-primary--purple btn-return">Voltar</a>
-                        <a href="#" class="btn-primary">Continuar</a>
+                        <a href="dashboard.html" class="btn-primary personalization-btn">Continuar</a>
                     </div>
                 </div>
 

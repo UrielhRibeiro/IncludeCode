@@ -1,25 +1,37 @@
-import { personalizationContainer, buttonsRegister, body} from './variables.js'
+import { personalizationContainer,registerContainer, buttonsRegister,registerBtn, body, personalizationBtn, btnReturn, arrowLeft} from './variables.js'
 
 function closeModal() {
-    personalizationContainer.style.display = 'none'
+    registerContainer.style.display = 'none'
     body.style.overflow = 'auto';
 }
+registerBtn.addEventListener('click',(ev) => {
+    ev.preventDefault()
+    registerContainer.style.display = 'none'
+    personalizationContainer.style.display = 'block'
+})
 
+
+btnReturn.addEventListener("click",(ev) => {
+    ev.preventDefault()
+    personalizationContainer.style.display = 'none'
+    registerContainer.style.display = 'block'
+  
+})
 function addButtonLeftInteration(){
-    const leftArrowButton = document.querySelector(".personalization-header__img-left img")
-    const leftReturnButton = document.querySelector(".btn-return")
+    const leftArrowButton = document.querySelector(".modal-header__img-left img")
+   
     leftArrowButton.addEventListener("click", () => {
         closeModal()
     })
-    leftReturnButton.addEventListener("click", () => {
-        closeModal()
-    })
+   
 }
-
+arrowLeft.addEventListener('click', () => {
+    personalizationContainer.style.display = 'none'
+})
 function openModal(event) {
     event.preventDefault();
     body.style.overflow = 'hidden';
-    personalizationContainer.style.display = 'block';
+    registerContainer.style.display = 'block';
     window.scrollTo(0,0)
     addButtonLeftInteration()
 }

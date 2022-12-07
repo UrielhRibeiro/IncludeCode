@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
     <title>Dashboard</title>
 </head>
 <body>
   <aside class="sidebar">
-        <img class="sidebar__logo" src="assets/logo.svg" alt="Logo">
-        
+    
+        <img class="sidebar__logo" src="assets/dashboard-logo.svg" alt="Logo">
+    
         <nav class="sidebar__navigation">
             <ul>
                 <li class="sidebar__list-element">
                     <a href="">
-                        <img class="sidebar__home" src="assets/home.svg" alt="Casa">
+                        <img class="sidebar__home" src="assets/home-active.svg" alt="Casa">
                         <p>Home</p>
                     </a>
                 </li>
@@ -26,11 +31,17 @@
                         <p>Análises</p>
                     </a>
                 </li>
+                <li class="sidebar__list-element">
+                    <a href="">
+                        <img class="sidebar__analytics" src="assets/crown.svg" alt="Gráfico">
+                        <p>Planos</p>
+                    </a>
+                </li>
             </ul>
         </nav>
-        <div class="sidebar__setting">
+        <div class="sidebar__question">
             <a href="">
-                <img src="assets/settings.svg" />
+                <img src="assets/question.svg" />
                 <p></p>
             </a>
         </div>
@@ -38,10 +49,12 @@
 
   <div class="dashboard">
     <header class="dashboard__header">
+
         <div class="dashboard__search-input">
             <input type="search" placeholder="Pesquise uma história....">
             <img class="dashboard__search-img" src="assets/search.svg" alt="">              
         </div>
+
        <div class="dashboard__header-right">
             <div class="dashboard__notification">
                 <a href=""><img class="dashboard__notification-img" src="assets/notification.svg" alt=""></a>  
@@ -49,12 +62,31 @@
             <div class="dashboard__profile">
                 
                 <img class="dashboard__profile-image" src="assets/profile.png" alt="">
+                
+                <div class="menu-background">
                     <p>Amélia Cardoso</p>
-                <div>
-                    <img class="dashboard__arrow-bottom" src="assets/arrow-bottom.png" alt="">
+                    <div>
+                        <img class="dashboard__arrow-bottom" src="assets/arrow-bottom.png" alt="">
+                    </div>
                 </div>
                   
             </div>   
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="/assets/profile-icon.svg" />
+                            <span>Seu perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/index.html">
+                            <img src="/assets/exit-icon.svg" />
+                            <span class="exit">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
        </div>
          
     </header>
@@ -71,20 +103,21 @@
         </section>
 
         <section class="dashboard__chapters">
-            <div class="dashboard__chapters-card free">
-                <div class="chapters-card__img">
-                    <img src="assets/chapter-one.png" alt="">
+            <a href="/viewChapter.html">
+                <div class="dashboard__chapters-card free">
+                    <div class="chapters-card__img">
+                        <img src="assets/chapter-img.svg" alt="">
+                    </div>
+                
+                    <div class="dashboard__chapters-text">
+                        <h4>CAPÍTULO 1</h4>
+                        <h5>O que é algoritmo? </h5>
+                        <p>
+                            Aprenda sobre algoritmos enquanto explora o planeta Azul.
+                        </p>
+                    </div>
                 </div>
-                <div class="dashboard__chapters-text">
-                    <h4>CAPÍTULO 1</h4>
-                    <h5>Lorem Ipsum</h5>
-                    <p>
-                        Lorem Ipsum dolor sit amet.
-                        Dolor sit met, lorem ipsum.
-                    </p>
-                </div>
-            </div>
-
+            </a>
             <div class="dashboard__chapters-card block">
                 <div class="chapters-card__img-block">
                     <img src="assets/lock.svg" alt="">
@@ -109,10 +142,19 @@
                     <p>Conteúdo disponível após conclusão do capítulo anterior</p>
                 </div>
             </div>
+            <div class="dashboard__chapters-card block">
+                <div class="chapters-card__img-block">
+                    <img src="assets/lock.svg" alt="">
+                </div>
+                <div class="chapters-card__description-block">
+                    <p>Conteúdo disponível após conclusão do capítulo anterior</p>
+                </div>
+            </div>
+            
         </section>
 
         <!-- Achievements => conquistas -->
-        <h3 >Suas conquistas</h3>
+        <h3 class="achievements-title">Suas conquistas</h3>
 
         <section class="dashboard__achievements">
             <div class="dashboard__achievements-card">
@@ -142,8 +184,10 @@
                     <p>Você concluiu mais de 2 capítulos em um dia!</p>
                 </div>
             </div>
+            
         </section>
     </main>   
   </div>
+  <script src="js/dashboard.js" ></script>
 </body>
 </html>

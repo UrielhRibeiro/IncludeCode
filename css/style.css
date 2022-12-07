@@ -16,6 +16,8 @@
 .swiper {
     width: 100%;
 }
+
+
 .swiper-button-prev {
     color:#515151;
   
@@ -24,6 +26,8 @@
 .swiper-button-next {
     color:#515151;
 }
+
+
 /* REGISTER PERSONALIZATION */
 
 .overlay {
@@ -35,7 +39,7 @@
     background: rgba(54, 54, 54, 0.4);
     backdrop-filter: blur(4px);
 }
-.personalization {
+.modal  {
     background-color: #1B1B26;
     width:90vw;
     height:80vh;
@@ -44,7 +48,94 @@
     top:50%;
     transform: translate(-50%, -50%);
     padding:60px 70px 0 70px;
+    border-radius: 8px;
 }
+.register-btn {
+    margin-top:50px;    
+}
+.register {
+    width: 70vw;
+    height: 70vh;
+}
+/* Register */
+.register-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-form label:not(.checkbox){
+    display: flex;
+    flex-direction:column ;
+}
+
+
+.register-form label input:not(.checkbox input) {
+
+    width: 100%;
+    max-width: 490px;
+    background-color: #26273B;
+    padding:12px 0 12px 14px;
+    border-radius: 8px;
+    border:none;
+    outline: none;
+    color:#fff;
+}
+.register-form div:not(.lastName){
+    display: flex;
+    align-items: flex-end;
+    gap:20px;
+}
+span.login-redirect {
+    color:#8D85E6;
+   
+    
+    cursor: pointer;
+}
+.login-span {
+    display: block;
+    margin-top:20px;
+}
+.lastName{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+}
+.register-form {
+    margin-top:30px ;
+    display: flex;
+    gap:16px;
+flex-direction: column;    
+}
+.register-btn {
+    margin-top:30px;
+}
+.register-form span {
+    color:#E7E7E7;
+    font-size: 14px ;
+  
+}
+.register-main img {
+    align-self: flex-end;
+}
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+
+    
+    gap:8px;
+    
+    align-self:center;
+}   
+.checkbox span {
+    font-size:12px;
+   
+}
+
+.register-form label input::placeholder {
+    color:#CCCCCC;
+}
+
 .personalization-main {
     display: flex;
     
@@ -79,10 +170,11 @@
 .personalization-main__box-accessory + .personalization-main__box-accessory {
     margin-top:10px;
 }
+
 .personalization-main__right::-webkit-scrollbar {
     width: 10px;
 }
-.personalization-header {
+.modal-header {
   
     display:flex;
     justify-content: space-between;
@@ -95,28 +187,28 @@
     margin-top:60px;
     gap:16px;
 }
-.personalization-header__img-left {
+.modal-header__img-left {
     display:flex;
     align-items: flex-end;
     gap:25px;
 }
-.personalization-header__img-left img {
+.modal-header__img-left img {
     cursor: pointer;
 }
-.personalization-header__right {
+.modal-header__right {
     display:flex;
     gap:16px;
     align-items: center;
 }
-.personalization-header__img-left h3 {
+.modal-header__img-left h3 {
     font-size:22px;
     letter-spacing: -0.075em;
 }
 
-.personalization-header__indication h4 {
+.modal-header__indication h4 {
     margin-bottom:2px;
 }
-.personalization-header__progress {
+.modal-header__progress {
     width:100px;
     height:100px;
     border-radius: 50%;
