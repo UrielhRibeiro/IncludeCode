@@ -262,7 +262,7 @@ registerBtn.addEventListener('click', (ev) => {
         name,
         isSocialName
     }
-    axios.post('https://include-code-api.vercel.app/user', userData).then((value) => {
+    axios.post('https://include-code-api-3.vercel.app/user', userData, {'Content-Type': 'application/json'}).then((value) => {
         console.log(value)
     })
     localStorage.setItem('user', JSON.stringify(userData))
@@ -310,7 +310,7 @@ loginConfirm.addEventListener('click', async(ev) => {
     const email = emailLogin.value
     const password = passwordLogin.value
     try {
-        const response = await axios.post('https://include-code-api.vercel.app/login', {email, password})
+        const response = await axios.post('https://include-code-api-3.vercel.app/login', {email, password})
         localStorage.setItem("user", JSON.stringify(response.data.user))
         window.location.href = "../dashboard.html"
     }catch(error){    
