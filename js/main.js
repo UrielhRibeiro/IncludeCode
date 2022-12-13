@@ -262,7 +262,7 @@ registerBtn.addEventListener('click', (ev) => {
         name,
         isSocialName
     }
-    axios.post('https://include-code-api-3.vercel.app/user', userData, {'Content-Type': 'application/json'}).then((value) => {
+    axios.post('https://include-code-api-3.vercel.app/user', userData).then((value) => {
         console.log(value)
     })
     localStorage.setItem('user', JSON.stringify(userData))
