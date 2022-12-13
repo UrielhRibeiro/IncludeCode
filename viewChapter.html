@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O programador misterioso</title>
+    <title>
+        Uma aventura no planeta azul
+
+    </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/viewChapter.css">
-
+    <script src="js/viewChapter.js" defer></script>
 
 </head>
 <body>
     <header class="main-header">
-        <div>
+        <div class="chapter-description">
         <div class="header__exit">
             <a href="/dashboard.html">
             <img src="./assets/arrow-left.svg" />
@@ -24,7 +27,7 @@
             </a>
         </div>
         <h1 class="chapter__title">
-            O programador misterioso
+            Uma aventura no planeta azul
         </h1>
         <ul>
             <li>
@@ -45,69 +48,74 @@
             <h4 class="aside__title">Conteúdos</h4>
             <ul class="aside__list">
                 <li class="active">
-                    <div class="list-element__number">
-                        <span>1</span>
-                    </div>
-                    <div class="list-element__text">
-                        <h4>O que é algoritmo?</h4>
-                        <span>Conteúdo textual</span>
-                    </div>
+                    <a>
+                        <div class="list-element__number">
+                            <span>1</span>
+                        </div>
+                        <div class="list-element__text">
+                            <h4>O que é algoritmo?</h4>
+                            <span>Conteúdo textual</span>
+                        </div>
+                    </a>
                 </li>
 
                 <li>
-                    <div class="list-element__number">
-                        <span>2</span>
-                    </div>
-                    <div class="list-element__text">
-                        <h4>Lorem ipsum</h4>
-                        <span>Atividade prática</span>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="list-element__number">
-                        <span>3</span>
-                    </div>
-                    <div class="list-element__text">
-                        <h4>Lorem ipsum</h4>
-                        <span>Atividade prática</span>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="list-element__number">
-                        <span>4</span>
-                    </div>
-                    <div class="list-element__text">
-                        <h4>Lorem ipsum</h4>
-                        <span>Conteúdo textual</span>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="list-element__number">
-                        <span>5</span>
-                    </div>
-                    <div class="list-element__text">
-                        <h4>Lorem ipsum</h4>
-                        <span>Atividade prática</span>
-                    </div>
+                    <a href="viewPractice.html">
+                        <div class="list-element__number">
+                            <span>2</span>
+                        </div>
+                        <div class="list-element__text">
+                            <h4>Lorem ipsum</h4>
+                            <span>Atividade prática</span>
+                        </div>
+                    </a>
                 </li>
 
             </ul>
         </aside>
         <div class="text">
             <h1>O que é algoritmo?</h1>
+            <!-- Imagem de aeronave pousando -->
             <p class="text__first-paragraph text__paragraph">
-                Maecenas convallis non ipsum id fermentum. Aliquam erat volutpat. Duis dignissim maximus tristique. Praesent id est dapibus, porta magna vel, venenatis tortor. Cras consectetur nisi quis viverra interdum. Aliquam erat volutpat. Nullam pellentesque dolor arcu, ac consectetur dui porttitor sed. Nunc at ex tortor. Donec sed enim volutpat, dignissim ex quis, iaculis lacus. Fusce aliquet tortor ac dolor efficitur, quis consequat nunc finibus. Praesent finibus euismod velit, a maximus nulla rutrum id. Integer libero lectus, elementum eget lorem vitae, vulputate condimentum quam. Fusce vitae blandit lorem. Ut consectetur non felis volutpat commodo. In vitae volutpat dolor, et accumsan felis.
-            </p>
-            <p class="text__second-paragraph text__paragraph mark">
-                Maecenas convallis non ipsum id fermentum. Aliquam erat volutpat. Duis dignissim maximus tristique. Praesent id est dapibus, porta magna vel, venenatis tortor. Cras consectetur nisi quis viverra interdum. Aliquam erat volutpat.
+                A caminho do planeta Hara, o planeta azul da sua galáxia, o astronauta Dylan Parker teve de diminuir a velocidade de sua nave para fazer reparos e ajustar seus equipamentos para pousar com segurança no planeta.
+                Para fazer isso, Dylan deve seguir os passos de um algoritmo para ter sucesso em sua missão. Mas... o que é algoritmo?
 
             </p>
-       
-            <p class="text__first-paragraph text__paragraph">
-                Maecenas convallis non ipsum id fermentum. Aliquam erat volutpat. Duis dignissim maximus tristique. Praesent id est dapibus, porta magna vel, venenatis tortor. Cras consectetur nisi quis viverra interdum. Aliquam erat volutpat. Nullam pellentesque dolor arcu.            </p>
+            <p class="text__second-paragraph text__paragraph mark">
+                Algoritmo é uma sequência lógica e finita de ações para obter a solução de um determinado problema. Com um algoritmo sempre haverá um padrão para que as instruções sejam seguidas e executadas, e, assim, o problema seja resolvido.
+            </p>
+            <p class="text__first-paragraph text__paragraph">    
+             Logo, para que o astronauta Dylan consiga uma solução, ele deve, através de um algoritmo, seguir os seguintes passos:
+            </p>
+            
+            <p class="text__first-paragraph text__paragraph list">
+                <ol class="olist">
+                    <li>Dimininuir ou parar o movimento de sua nave</li>
+                    <li>Procurar ferramentas necessárias para o reparo</li>
+                    <li>Indentificar onde deve ser feito o reparo</li>
+                    <li>Usar suas ferramentas</li>
+                    <li>
+                        Conferir se o reparo teve êxito
+                        <ul>
+                            <li>Se sim, guardar as ferramentas e encerrar o processo</li>
+                            <li>Se não, voltar para identificar e usar as ferramentas novamente.</li>
+                        </ul>
+
+                    </li>
+                </ol>    
+            </p>
+            <h1 class="fixacao">Fixação</h1>
+
+            <p class="text__first-paragraph text__paragraph margin-add mark">
+                Então, fixando, o algoritmo é importante pois seu objetivo é focado na resolução de problemas e desenvolvimento do pensamento lógico.
+            </p>
+            <p class="text__first-paragraph text__paragraph margin-add">
+                Mas como será que podemos representar os algoritmos por gráficos? Venha descobrir na nossa próxima aventura.
+            </p>
+            <a class="next-chapter-button" href="viewPractice.html">
+                <span>Próximo conteúdo</span>
+                <img src="./assets/arrow-left.svg" />
+            </a>
         </div>
     </main>
 </body>

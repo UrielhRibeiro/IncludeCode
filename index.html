@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    
     <script src="./js/variables.js" defer type="module"></script>
     <script src="./js/main.js" defer type="module"> </script>
     <script src="./js/register.js" defer > </script>
@@ -24,16 +26,48 @@
     <link rel="stylesheet" href="css/sizes.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 </head>
 <body>
 
+    <div class="login-container overlay">
+        <div class="modal login">
+            <header class="login-header">
+                <img src="assets/cancel.svg" />
+            </header>
+            <main class="main-login">
+                <button class="login__google-button">
+                    <img src="assets/google-icon.svg" />
+                    <span>Continue com Google</span>
+                </button>
+                <span class="separator-login">OU</span>
+                <form class="login-form">
+                    <div class="login-error"></div>
+                    <input class="email-login" type="email" placeholder="E-mail"/>
+                    <input class="password-login" type="password" placeholder="Senha" />
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Lembre-se de mim</span>
+                        </label>
+                        <a href="#" class="forget-password">Esqueceu a senha?</a>
+                    </div>
+                    <a href="" class="btn-primary login-btn">Fazer Login</a>
+                </form>
+                <span class="register-redirect">Não tem uma conta? <a href="#">Crie uma</a></span>
+
+            </main>
+        </div>
+    </div>
+
     <div class="register-container overlay">
         <div class="modal register">
             <header class="modal-header">
                 <div class="modal-header__left">
-                    <div class="modal-header__img-left">
+                    <div class="modal-header__img-left register-left">
                         <img src="assets/arrow-left.svg" alt="Seta para esquerda"/>
                         <h3>Crie uma conta</h3>
                     </div>
@@ -58,43 +92,50 @@
                     
                     <label>
                         <span>E-mail</span>
-                        <input type="email" placeholder="Digite seu e-mail..." />
+                        <input type="email" placeholder="Digite seu e-mail..."  id="email"/>
+                        <span class="errorMessage emailError"></span>
+                        
+
                     </label>
                     <div class="lastName">
                         <label>
                             <span>Nome</span>
-                            <input type="text" placeholder="Ex.: Maria" />
+                            <input type="text" placeholder="Ex.: Maria" id="name"/>
+                            <span class="errorMessage nameError"></span>
                             <label class="checkbox">
-                                <input type="checkbox" />
+                                <input type="checkbox" id="isSocialName"/>
                                 <span>Esse é o meu nome social</span>
                             </label>
                         </label>
                         <label >
                             <span>Sobrenome</span>
-                            <input type="text" placeholder="Ex.: Amélia" />
+                            <input type="text" placeholder="Ex.: Amélia" id="lastName" />
+                            <span class="errorMessage lastNameError"></span>
                         </label>
                     </div>
 
                     <div>
                         <label>
                             <span>Crie uma senha</span>
-                            <input type="password" placeholder="Mín. 4 caracteres" />
+                            <input type="password" placeholder="Mín. 4 caracteres" id="password" />
+                            <span class="errorMessage passwordError"></span>
                         </label>
 
                         <label>
                             <span>Digite Novamente</span>
-                            <input type="password" placeholder="Ex.: Amélia" />
+                            <input type="password" placeholder="" id="confirmPassword"/>
+                            <span class="errorMessage confirmPasswordError"></span>
                         </label>
                     </div>
 
                     <div>
                         <label>
                             <span>Idade</span>
-                            <input type="number" placeholder="Ex.: 17"/>
+                            <input type="number" placeholder="Ex.: 17" id="age"/>
                         </label>
                         
                         <label class="checkbox">
-                            <input type="checkbox" />
+                            <input type="checkbox" id="notInformAge"/>
                             <span>Prefiro não informar</span>
                         </label>
                         

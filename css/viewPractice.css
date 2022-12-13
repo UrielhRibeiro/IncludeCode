@@ -1,0 +1,34 @@
+.chapter__cover {
+    background-color: #23243D;
+    height:140px;
+    width:100%;
+    max-width: 780px;
+    padding:35px 76px;
+    border-radius:8px;
+}
+
+.challenge-description {
+    margin-top:16px;
+    
+}
+.challenge-description span {
+    font-size: 16px;
+}
+span.challenge-mark {
+    color:#93909F;
+}
+.description-practice {
+    color:#948EAE;
+    margin-bottom:10px;
+}
+.text {
+    top:10px;
+}
+.chapter__cover {
+    position: relative;
+    top:190px;
+}
+.main-header  {
+    padding:70px 70px 50px 70px;
+
+}

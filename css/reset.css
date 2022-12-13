@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #1B1B26;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#515151;
+    border-radius: 100px;
+}
+
+
+
+
 a,
 p,
 h1,
@@ -12,6 +27,7 @@ h3,
 h4,
 h5,
 h6, 
+ol,
 span:not(.introduction__title__gradient){
     color:var(--neutral-color);
     font-size:18px;
@@ -20,9 +36,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 li, 
 ul {
     list-style: none;
+}
+ol li{
+    list-style-type: decimal;
 }
 a {
     text-decoration: none;

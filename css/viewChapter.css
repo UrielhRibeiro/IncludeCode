@@ -25,6 +25,11 @@
 }
 .main {
     background: linear-gradient(124.74deg, #1B1B26 26.29%, #171A3A 148.74%);
+    height: 100%;
+    margin-bottom:20px;
+}
+body {
+    background: linear-gradient(124.74deg, #1B1B26 26.29%, #171A3A 148.74%);
 }
 .chapter__title {
     font-size:30px;
@@ -54,7 +59,7 @@
     background-color: #23243D;
     
 }
-.aside__list li {
+.aside__list li a {
     display: flex;
     gap:16px;
     max-width:268px ;
@@ -109,6 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
 }
 .mark::before {
     content: "";
@@ -117,4 +123,43 @@
     margin-right: 12px;
     width:12px;
     background-color: #5748D3;
+}
+
+.olist {
+    margin-left:20px;
+}
+.olist li{
+    margin-top:15px;
+}
+.olist ul {
+    margin-left:20px;
+}
+.olist ul li {
+    list-style: disc;
+}
+
+.margin-add {
+    margin-top:28px;
+    font-weight: 800;
+
+}
+.fixacao{
+    margin-top:20px;
+}
+
+.next-chapter-button {
+    background-color:#23243D;
+    border:none;
+    color:#fff;
+    font-size:16px;
+    padding:10px 20px;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    border-radius: 8px;
+}
+.next-chapter-button img {
+    rotate: 180deg;
 }
